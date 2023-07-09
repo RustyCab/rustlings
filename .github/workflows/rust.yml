@@ -27,7 +27,7 @@ jobs:
     - name: checkouttoml
       run: curl -o check.toml https://raw.githubusercontent.com/livstyle/os-autograding-rust/main/check.toml
     - name: Run tests
-      run: cargo test --test check --verbose
+      run: cargo test --test integration_tests --verbose
     - uses: yfblock/os-autograding@master
       id: autograding
       with:
