@@ -12,7 +12,7 @@ on:
 
 env:
   CARGO_TERM_COLOR: always
-  TZ: Asia/Shanghai 
+  TZ: Asia/Shanghai
 
 jobs:
   build:
@@ -27,7 +27,7 @@ jobs:
     - name: checkouttoml
       run: curl -o check.toml https://raw.githubusercontent.com/livstyle/os-autograding-rust/main/check.toml
     - name: Run tests
-      run: cargo test --test integration_tests --verbose
+      run: cargo test --test check --verbose
     - uses: yfblock/os-autograding@master
       id: autograding
       with:
